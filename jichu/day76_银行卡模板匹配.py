@@ -127,7 +127,7 @@ for (i,(gx,gy,gw,gh)) in enumerate(locs):
         # 取出数字
         roi=group[y:y+h,x:x+w]
         roi=cv2.resize(roi,(57,88))
-        cv2.imshow('img',roi)
+        #cv2.imshow('img',roi)
 
         # 进行模板匹配
         scores = []
@@ -144,6 +144,6 @@ for (i,(gx,gy,gw,gh)) in enumerate(locs):
     cv2.putText(image,"".join(group_output),(gx,gy-15),cv2.FONT_HERSHEY_SIMPLEX,0.6,(0,0,255),2)
 # 展示
 cv2.imshow('name',image)
-cv2.imshow('123',img)
+#v2.imshow('123',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
